@@ -16,7 +16,7 @@
   <!-- Topbar -->
   <header class="topbar">
     <div class="container">
-            <div class="brand">
+      <div class="brand">
         <a href="/" class="logo" aria-label="Intervue home">
           <img src="assets\download.jpg" alt="Intervue" />
         </a>
@@ -198,26 +198,46 @@
   </section>
 
   <!-- Testimonial -->
-  <section class="section">
-    <div class="container">
-      <div class="testimonial">
-        <div class="testimonial__video">
-          <button class="play"><i class="ri-play-fill"></i></button>
-        </div>
-        <div class="testimonial__copy">
-          <p>After interviewing candidates on Intervue, we were able to convert at least 5 percent of people from our application base to hires.</p>
-          <div class="avatarRow">
-            <img src="https://i.pravatar.cc/64" alt="Niket Gupta">
-            <div>
-              <strong>Niket Gupta</strong>
-              <div>Group head of talent acquisition, Yubi</div>
-              <a href="#" class="inline">See more customer stories →</a>
-            </div>
-          </div>
-        </div>
+<section class="section">
+  <div class="container">
+    <div class="testimonial">
+      <!-- Left: video with overlay + caption + triangle play -->
+      <div class="testimonial__video">
+        <video class="video__media"
+               src="assets/Testimonial.mp4"
+               preload="metadata"
+               playsinline
+               muted
+               controls>
+          Sorry, your browser doesn’t support embedded videos.
+        </video>
+
+        <!-- soft dark overlay on left -->
+        <div class="video__shade"></div>
+
+        <!-- blue triangle play -->
+        <button class="play" aria-label="Play video"></button>
+
+        <!-- caption bottom-left -->
+        <!-- <div class="video__caption">
+          <strong>Niket Gupta</strong>
+          <span>Head of Acquisition, Yubi</span>
+        </div> -->
+      </div>
+
+      <!-- Right: copy -->
+      <div class="testimonial__copy">
+        <p>After interviewing candidates on Intervue, we were able to convert at least 5% of people from our application base to hires.</p>
+        <p style="margin:14px 0 4px 0;"><strong>Niket Gupta</strong></p>
+        <p style="margin:0; color:#6b7280;">Group head of talent acquisition, Yubi</p>
+        <p style="margin-top:18px;">
+          <a href="#" class="inline inline--blue">See more customer stories →</a>
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Explore -->
   <section class="section">
@@ -252,8 +272,8 @@
       <div class="faq__wrap">
         <div class="faq__intro">
           <h2>FAQs</h2>
-          <p>Here are frequently asked questions to clear all your doubts.</p>
-          <p>Still have doubts? <a class="inline" href="#">Talk to our representative</a></p>
+          <p>Here are frequently asked questions to clear all your doubts.</p><br>
+          <p>Still have doubts?<br><a class="inline" href="#">Talk to our representative</a></p>
         </div>
         <div class="accordion" id="faq">
           <div class="accordion__item">

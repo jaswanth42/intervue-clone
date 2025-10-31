@@ -18,3 +18,26 @@ document.addEventListener('DOMContentLoaded', function(){
       form.reset();
     });
   });
+document.addEventListener('DOMContentLoaded', () => {
+  const box = document.querySelector('.testimonial__video');
+  if (!box) return;
+  const video = box.querySelector('.video__media');
+  const playBtn = box.querySelector('.play');
+  const shade = box.querySelector('.video__shade');
+
+  function sync() {
+    const playing = !!(video.currentTime > 0 && !video.paused && !video.ended);
+    if (playBtn) playBtn.style.display = playing ? 'none' : 'block';
+    if (shade) shade.style.opacity = playing ? '0' : '1';
+  }
+
+  playBtn?.addEventListener('click', () => {
+    video.muted = false;
+    video.play();
+    sync();
+  });
+
+  video.addEventListener('play',  sync);
+  video.addEventListener('pause', sync);
+  video.addEventListener('ended', sync);
+});
